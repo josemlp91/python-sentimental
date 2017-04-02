@@ -8,26 +8,26 @@ from . import views
 urlpatterns = [
     url(
         regex=r'^$',
-        view=views.get_last_topics,
-        name='test'
+        view=views.TopicListAPIView.as_view(),
+        name='topic-list'
     ),
 
     url(
-        regex=r'^get-current-topic/$',
-        view=views.get_current_topic,
-        name='get-current-topic'
+        regex=r'^current-topic/$',
+        view=views.LastTopicRetrieveAPIView.as_view(),
+        name='current-topic'
     ),
 
     url(
         regex=r'^post-topic/$',
-        view=views.post_topic,
+        view=views.PostTopicCreateAPIView.as_view(),
         name='post-topic'
     ),
 
     url(
-        regex=r'^get-score-topic/$',
-        view=views.get_score_topic,
-        name='get-score-topic'
+        regex=r'^score-topic/$',
+        view=views.GetScoreTopicAPI.as_view(),
+        name='score-topic'
     )
 
 

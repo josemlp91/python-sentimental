@@ -43,7 +43,8 @@ DJANGO_APPS = [
 
     # Useful template tags:
     # 'django.contrib.humanize',
-
+    'rest_framework',
+    'rest_framework_api_key',
     # Admin
     'django.contrib.admin',
     'django-sentimental.api'
@@ -279,3 +280,9 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework_api_key.permissions.HasAPIAccess',
+    )
+}
