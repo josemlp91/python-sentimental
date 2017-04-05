@@ -12,8 +12,8 @@ from __future__ import absolute_import, unicode_literals
 
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 3  # (django-sentimental/config/settings/base.py - 3 = django-sentimental/)
-APPS_DIR = ROOT_DIR.path('django-sentimental')
+ROOT_DIR = environ.Path(__file__) - 3  # (django_sentimental/config/settings/base.py - 3 = django_sentimental/)
+APPS_DIR = ROOT_DIR.path('django_sentimental')
 
 # Load operating system environment variables and then prepare to use them
 env = environ.Env()
@@ -47,7 +47,7 @@ DJANGO_APPS = [
     'rest_framework_api_key',
     # Admin
     'django.contrib.admin',
-    'django-sentimental.api'
+    'django_sentimental.api'
 ]
 THIRD_PARTY_APPS = [
     'crispy_forms',  # Form layouts
@@ -59,7 +59,7 @@ THIRD_PARTY_APPS = [
 # Apps specific for this project go here.
 LOCAL_APPS = [
     # custom users app
-    'django-sentimental.users.apps.UsersConfig',
+    'django_sentimental.users.apps.UsersConfig',
     # Your stuff: custom apps go here
 ]
 
@@ -81,7 +81,7 @@ MIDDLEWARE = [
 # MIGRATIONS CONFIGURATION
 # ------------------------------------------------------------------------------
 MIGRATION_MODULES = {
-    'sites': 'django-sentimental.contrib.sites.migrations'
+    'sites': 'django_sentimental.contrib.sites.migrations'
 }
 
 # DEBUG
@@ -262,8 +262,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
-ACCOUNT_ADAPTER = 'django-sentimental.users.adapters.AccountAdapter'
-SOCIALACCOUNT_ADAPTER = 'django-sentimental.users.adapters.SocialAccountAdapter'
+ACCOUNT_ADAPTER = 'django_sentimental.users.adapters.AccountAdapter'
+SOCIALACCOUNT_ADAPTER = 'django_sentimental.users.adapters.SocialAccountAdapter'
 
 # Custom user app defaults
 # Select the correct user model
@@ -283,6 +283,6 @@ ADMIN_URL = r'^admin/'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework_api_key.permissions.HasAPIAccess',
+        #'rest_framework_api_key.permissions.HasAPIAccess',
     )
 }

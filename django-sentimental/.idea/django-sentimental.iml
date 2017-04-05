@@ -13,7 +13,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/django-sentimental" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/django_sentimental" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/node_modules" />
     </content>
     <orderEntry type="jdk" jdkName="Python 2.7.12 virtualenv at ~/workspace/python_sentimental/venv" jdkType="Python SDK" />

@@ -2,7 +2,7 @@ from django.apps import AppConfig
 
 
 class UsersConfig(AppConfig):
-    name = 'django-sentimental.users'
+    name = 'django_sentimental.users'
     verbose_name = "Users"
 
     def ready(self):

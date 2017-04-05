@@ -16,8 +16,8 @@ urlpatterns = [
     url(settings.ADMIN_URL, admin.site.urls),
 
     # User management
-    url(r'^users/', include('django-sentimental.users.urls', namespace='users')),
-    url(r'^api/', include('django-sentimental.api.urls', namespace='api')),
+    url(r'^users/', include('django_sentimental.users.urls', namespace='users')),
+    url(r'^api/', include('django_sentimental.api.urls', namespace='api')),
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here
